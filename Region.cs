@@ -14,9 +14,7 @@ public class Region
         this.Delegate = region.Delegate;
         this.DelegateVotes = region.DelegateVotes;
         this.DelegateAuth = AuthorityToShort(region.DelegateAuth);
-        this.Founder = region.Founder;
         this.NumNations = region.NumNations;
-        this.FounderAuth = AuthorityToShort(region.FounderAuth);
         this.Factbook = region.Factbook;
         this.LastUpdate = (double)region.LastUpdate!;
         this.LastMajorUpdate = (double)region.LastMajorUpdate!;
@@ -33,8 +31,6 @@ public class Region
     public string Delegate { get; init; }
     public int DelegateVotes { get; init; }
     public ushort DelegateAuth { get; init; }
-    public string Founder { get; init; }
-    public ushort FounderAuth { get; init; }
     public string Factbook { get; init; }
     public string Embassies { get; init; }
     public double LastUpdate { get; init; }
@@ -60,7 +56,6 @@ public class Region
         return tmp;
     }
 
-    public bool FounderHas(Authorities authority) => (FounderAuth & (ushort)authority) > 0;
     public bool DelegateHas(Authorities authority) => (DelegateAuth & (ushort)authority) > 0;
     public bool hasPassword { get; init; }
     public bool hasGovernor { get; init; }

@@ -2,7 +2,7 @@
 
 #region License
 /*
-V20XX Raiding Suite
+V21XX Raiding Suite
 Copyright (C) 2022 Vleerian
 
 This program is free software: you can redistribute it and/or modify
@@ -20,6 +20,6 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 #endregion
 
-var app = new CommandApp<V20XX>();
+var app = new CommandApp<V21XX>();
 return await app.RunAsync(args);
 

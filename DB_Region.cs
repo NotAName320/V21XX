@@ -1,5 +1,4 @@
 using SQLite;
-using SQLitePCL;
 
 /// <summary>
 /// This is primarily to control the size of the SQlite db And to ensure
@@ -17,8 +16,6 @@ public class DB_Region
     public string Delegate { get; init; }
     public int DelegateVotes { get; init; }
     public ushort DelegateAuth { get; init; }
-    public string Founder { get; init; }
-    public ushort FounderAuth { get; init; }
     public string Factbook { get; init; }
     public string Embassies { get; init; }
     public string MajorEST { get; init; }
@@ -47,7 +44,6 @@ public class DB_Region
         return tmp;
     }
 
-    public bool FounderHas(Authorities authority) => (FounderAuth & (ushort)authority) > 0;
     public bool DelegateHas(Authorities authority) => (DelegateAuth & (ushort)authority) > 0;
     public bool hasPassword { get; init; }
     public bool hasGovernor { get; init; }
